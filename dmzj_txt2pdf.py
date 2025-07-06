@@ -16,7 +16,7 @@ convert_dmzj_txts_to_pdf(
 
 from __future__ import annotations
 
-import argparse, os, sys, shutil
+import argparse, os, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from itertools import groupby
 from pathlib import Path
@@ -63,7 +63,7 @@ def _clean_fragment(raw: str) -> str:
 def _wrap_draw(c: Canvas, txt: str,
                font: str, size: int, lh: int,
                x0: int, y0: int, wmax: int, bottom: int) -> None:
-    """Soft-wrap text into multi-page canvas."""
+    """Soft-wrap text into multipage canvas."""
     y = y0
     c.setFont(font, size)
 
